@@ -1,0 +1,44 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 26
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        debug {
+            buildConfigField "String", "BASE_URL", "\"http://100.67.74.162:3000/\""
+            buildConfigField "String", "MAPS_GEOCODE_URL", "\"http://maps.googleapis.com/maps/api/geocode/\""
+        }
+
+        release {
+            buildConfigField "String", "BASE_URL", "\"http://http://100.67.74.162:3000/\""
+            buildConfigField "String", "MAPS_GEOCODE_URL", "\"http://maps.googleapis.com/maps/api/geocode/\""
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            minifyEnabled false
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+
+    testCompile 'org.mockito:mockito-core:1.10.19'
+
+    compile 'com.squareup.retrofit2:retrofit:2.3.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.3.0'
+}

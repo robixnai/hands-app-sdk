@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">sdk</string>
+
+    <string name="msg_network_get_error">Ocorreu um erro ao executar a consulta</string>
+    <string name="msg_network_put_error">Ocorreu um erro ao executar a transação</string>
+
+</resources>

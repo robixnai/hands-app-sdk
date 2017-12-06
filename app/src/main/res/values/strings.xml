@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Hands APP</string>
+
+    <string name="msg_connection_error">Dispositivo não conectado a internet</string>
+    <string name="msg_title_alert">Alerta</string>
+    <string name="msg_action_ok">Ok</string>
+    <string name="msg_gps_enable">GPS não está ativado.\nDeseja ativar para encontrar a localização atual?</string>
+    <string name="msg_action_yes">SIM, AGORA</string>
+    <string name="msg_action_no">NÃO, TALVEZ MAIS TARDE</string>
+    <string name="msg_location_update">Localização atualizada com sucesso!</string>
+    <string name="msg_title_hands">Hands</string>
+    <string name="msg_updating_location">Atualizando localização</string>
+
+
+    <string name="lbl_android">Android</string>
+    <string name="lbl_ios">iOS</string>
+    <string name="lbl_android_title_detail">Android - %s</string>
+    <string name="lbl_ios_title_detail">iOS - %s</string>
+    <string name="lbl_apps_instaled">apps instalados</string>
+    <string name="lbl_home">Casa</string>
+    <string name="lbl_work">Trabalho</string>
+</resources>
