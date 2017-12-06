@@ -114,6 +114,10 @@ class UserDataActivity : AppCompatActivity(), UserDataInterface.View, OnItemClic
         includeProgressBar.visibility = visibility
     }
 
+    override fun showNoData(visibility: Int) {
+        includeNoData.visibility = visibility
+    }
+
     override fun showConnectionError() {
         Toast.makeText(this@UserDataActivity, getString(R.string.msg_connection_error), Toast.LENGTH_LONG).show()
     }

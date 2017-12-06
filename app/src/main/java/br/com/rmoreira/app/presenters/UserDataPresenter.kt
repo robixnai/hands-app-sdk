@@ -27,14 +27,17 @@ class UserDataPresenter(private var mView: UserDataInterface.View) : UserDataInt
             mPage = page
             mModel.getUserData(page)
         } else {
+            mView.showNoData(View.VISIBLE)
             mView.showConnectionError()
         }
     }
 
     override fun response(response: Any?) {
         if (response is String) {
+            mView.showNoData(View.VISIBLE)
             mView.showRequestError(response)
         } else {
+            mView.showNoData(View.GONE)
             mView.updateUserDataList(response as MutableList<UserData>, mPage!! > 1)
         }
         mView.showProgressBar(View.GONE)

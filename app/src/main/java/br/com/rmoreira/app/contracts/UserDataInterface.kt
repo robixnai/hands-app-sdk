@@ -18,6 +18,7 @@ interface UserDataInterface {
         fun checkAndRequestPermissions()
         fun updateUserDataList(userDataList: MutableList<UserData>, loading: Boolean)
         fun showProgressBar(visibility: Int)
+        fun showNoData(visibility: Int)
         fun showConnectionError()
         fun showRequestError(message: String)
     }
